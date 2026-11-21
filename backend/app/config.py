@@ -1,0 +1,20 @@
+from functools import lru_cache
+
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+class Settings(BaseSettings):
+    """Application settings loaded from environment variables or .env."""
+
+    app_name: str = "Tamil Nadu Transport & Railway Advisory API"
+    app_env: str = "development"
+    api_prefix: str = "/api"
+    database_url: str = "mysql+pymysql://transitnotice:change-me@localhost:3306/transitnotice"
+    frontend_origin: str = "http://localhost:5173"
+
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
+
+
+@lru_cache
+def get_settings() -> Settings:
+    return Settings()

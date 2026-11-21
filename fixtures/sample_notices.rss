@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>TransitNotice local fixture</title>
+    <item>
+      <guid>rss-001</guid>
+      <title>Station closure planned</title>
+      <description>Central Station closes for planned maintenance.</description>
+      <link>https://example.invalid/notices/rss-001</link>
+      <pubDate>Tue, 03 Nov 2026 08:00:00 +0530</pubDate>
+      <route>10|20</route>
+      <type>planned maintenance</type>
+      <area>Central Station</area>
+    </item>
+  </channel>
+</rss>
